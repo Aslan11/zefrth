@@ -1,5 +1,5 @@
 isInDOMTree = () ->
-  return document.getElementById('description') != null
+  return (document.getElementById('create-issue-dialog') isnt null and document.getElementById('description') isnt null)
 
 executeOnLoad = (func) ->
   # This function will check, every tenth of a second, to see if
@@ -7,12 +7,9 @@ executeOnLoad = (func) ->
   # that it is, we execute the provided function.
   if isInDOMTree()
     func()
-  else
-    setTimeout (->
-      executeOnLoad func
-      return
-    ), 100
-  return
+  setTimeout (->
+    executeOnLoad func
+  ), 100
 
 executeOnLoad( ->
     element = document.getElementById('description')
