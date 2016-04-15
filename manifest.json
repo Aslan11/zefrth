@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "ZEFR Jira Ticket Helper",
+  "description": "This extension aids the user in creating a Jira Ticket per Krassi Hristova's Ticket Template",
+  "version": "0.1",
+  "content_scripts": [
+  {
+    "matches": [
+      "https://zefrinc.atlassian.net/*"
+    ],
+    "js": ["content.js"]
+  }
+]
+}
