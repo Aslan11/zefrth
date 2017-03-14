@@ -15,24 +15,25 @@ executeOnLoad( ->
     element = document.getElementById('description')
     if not element.value and element.tagName.toLowerCase() is 'textarea'
       element.value = """
-{panel:title=(on) TASK |titleBGColor=#E3F09B|bgColor=#EEE}{panel}
-* _What is the task that should be completed?_
-* _Requirements (including edge cases), API format, JSON snippets, error formats, schema details, file locations, UX mocks etc_
+{panel:title=(on) TASK |titleBGColor=#E3F09B|bgColor=#EEE}
+_What is the task to be completed? What are the requirements? E.g. API format, JSON snippets, error formats, schema details, file locations, UX mocks, edge cases, etc._
 
-<INSERT TASK DETAILS HERE>
+_<INSERT TASK DETAILS HERE>_
+{panel}
+{panel:title=(/) DEFINITION OF DONE |titleBGColor=#F79F79|bgColor=#EEE}
+_What needs to be delivered for this work to be considered "Done"? What is the acceptance criteria for the work?_
 
-----
-{panel:title=(/) DEFINITION OF DONE |titleBGColor=#F79F79|bgColor=#EEE}{panel}
- * _What needs to be present for this work to be considered "Done"?_
-* _Acceptance Criteria for the Work_
+_<INSERT DEFINITION of DONE DETAILS HERE>_
+{panel}
+{panel:title=(i) PURPOSE|titleBGColor=#87B6A7|bgColor=#EEE}
+_Why are you doing this work? Why is it useful/needed? What is the proposed value?_
 
-<INSERT DEFINITION of DONE HERE>
+_<INSERT PURPOSE DETAILS HERE>_
+{panel}
+{panel:title=(?) NOTES|titleBGColor=#8097B6|bgColor=#EEE}
+_Anything else?_
 
-
-----
-{panel:title=(i) PURPOSE|titleBGColor=#87B6A7|bgColor=#EEE}{panel}
-* _Why are you doing this work? Why is it useful/needed?_
-
-<INSERT CONTEXT  HERE>
+_<INSERT NOTES DETAILS HERE>_
+{panel}
       """
 )
