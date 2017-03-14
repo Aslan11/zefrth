@@ -1,7 +1,7 @@
 # ZEFR Jira Ticket Helper
 > Tiny chrome extension that helps the user create Jira Tickets that follow Nick Rotondo's Ticket Template.
 
-![](http://imgur.com/a/6PeEo)
+![](http://i.imgur.com/yWMrUKb.png)
 
 ### Version
 0.2
